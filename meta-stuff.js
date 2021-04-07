@@ -10,7 +10,7 @@ AFRAME.registerComponent('meta-stuff', {
       //   console.log(el.object3D.environment);
       // });
       this.debugTextElement = document.getElementById('debug-text')
-      this.debugTextElement.innerHTML = "Test"
+      // this.debugTextElement.innerHTML = "Test"
       this.camera = document.getElementById('camera')
       this.hiderWalls = document.getElementById('hider-walls')
       this.envWalls = document.getElementById('wall-env')
@@ -30,6 +30,7 @@ AFRAME.registerComponent('meta-stuff', {
       this.doorFrame = document.getElementById('doorframe')
       this.platform = document.getElementById('base')
       this.doorCollider.object3D.visible = false
+      this.portalOverlay = document.getElementById('portal-overlay')
       console.log(this.doorCollider.object3D.visible);
       // this.hiderWalls.object3D.visible = false
       // this.allContent.object3D.visible = false
@@ -57,6 +58,7 @@ AFRAME.registerComponent('meta-stuff', {
           this.overlay.style.visibility = "hidden"
         }
       this.showPortalElements = () => {
+        this.portalOverlay.style.visibility = 'visible'
         this.doorCollider.object3D.visible = true
         this.dashboardElements.object3D.visible = true
         this.envWalls.object3D.visible = false;
@@ -87,7 +89,7 @@ AFRAME.registerComponent('meta-stuff', {
       if(!this.positionSet){
         this.parent.object3D.rotation.y = this.camera.object3D.rotation.y;
         this.camFinal.object3D.getWorldPosition(this.camWorldPosition)
-        this.debugTextElement.innerHTML = this.camWorldPosition.x + ' 4 ' + this.camWorldPosition.z
+        // this.debugTextElement.innerHTML = this.camWorldPosition.x + ' 4 ' + this.camWorldPosition.z
       }
     },
   }

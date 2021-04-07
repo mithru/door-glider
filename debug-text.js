@@ -5,7 +5,7 @@ AFRAME.registerComponent('debug-custom', {
     },
     init() {
       this.debugTextElement = document.getElementById('debug-text')
-      this.debugTextElement.innerHTML = this.data.text
+      // this.debugTextElement.innerHTML = this.data.text
       if(this.data.visible){
         this.debugTextElement.style.visibility = "visible"
       } else {

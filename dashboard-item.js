@@ -13,7 +13,7 @@ AFRAME.registerComponent('dashboard-item', {
 
     this.portalOverlay = document.getElementById('portal-overlay')
     this.infoBtn = document.getElementById('info-button')
-    this.closeBtn =  document.getElementById('close-button')
+    // this.closeBtn =  document.getElementById('close-button')
     this.itemDesc = document.getElementById('item-desc')
 
     this.camera = document.getElementById('camera')
@@ -50,7 +50,7 @@ AFRAME.registerComponent('dashboard-item', {
       this.camera.setAttribute('look-controls', 'enabled', true);
 
       this.infoBtn.style.visibility = "hidden"
-      this.closeBtn.style.visibility = "hidden"
+      // this.closeBtn.style.visibility = "hidden"
       this.itemDesc.style.visibility = "hidden"
       interactable = false;
       console.log('hovered off ' + el);
@@ -76,7 +76,7 @@ AFRAME.registerComponent('dashboard-item', {
         console.log("Load the model now...")
         // make text and ui visible
         this.infoBtn.style.visibility = "visible"
-        this.closeBtn.style.visibility = "visible"
+        // this.closeBtn.style.visibility = "visible"
         this.itemDesc.style.visibility = "visible"
         this.camera.setAttribute('look-controls', 'enabled', false);
       }
@@ -87,7 +87,7 @@ AFRAME.registerComponent('dashboard-item', {
     el.addEventListener('mouseleave', this.hoveredOff)
     el.addEventListener('animationcomplete__zoomin', this.readyForMV)
     el.addEventListener('animationcomplete', this.resetRotation)
-    this.closeBtn.addEventListener('click', this.hoveredOff)
+    // this.closeBtn.addEventListener('click', this.hoveredOff)
     this.resetRotation();
 
   }, tick(){

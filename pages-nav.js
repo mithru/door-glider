@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // desc1.style.animationDuration = '2s';
         desc2.style.display = 'block';
         desc2.style.animationName = 'slidein';
-        desc2.style.animationDuration = '2s';
+        desc2.style.animationDuration = '1s';
     });
 
     nextBtn2.addEventListener("click", function() {
@@ -34,6 +34,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // desc2.style.animationDuration = '2s';
         desc3.style.display = 'block';
         desc3.style.animationName = 'slidein';
-        desc3.style.animationDuration = '2s';
+        desc3.style.animationDuration = '1s';
     });
 });
