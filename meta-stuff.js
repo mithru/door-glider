@@ -38,6 +38,7 @@ AFRAME.registerComponent('meta-stuff', {
 
       this.startExperience = () => {
         this.overlay = document.getElementById('overlay')
+        this.camParent.setAttribute('animation' , 'property: position; delay: 3000; to: ' + this.camWorldPosition.x + ' 0 ' + this.camWorldPosition.z + '; easing: easeInOutQuad; loop: false; delay:5000; dur: 3000')
 
         console.log("start");
         this.positionSet = true
@@ -73,17 +74,17 @@ AFRAME.registerComponent('meta-stuff', {
 
       this.moveCameraIntoScene = () => {
         console.log('moving into the scene');
-        this.camParent.setAttribute('animation' , 'property: position; delay: 3000; to: ' + this.camWorldPosition.x + ' 0 ' + this.camWorldPosition.z + '; easing: easeInOutQuad; loop: false; dur: 3000')
+        // this.camParent.setAttribute('animation' , 'property: position; delay: 3000; to: ' + this.camWorldPosition.x + ' 0 ' + this.camWorldPosition.z + '; easing: easeInOutQuad; loop: false; dur: 3000')
       }
       this.doorClicked = () => {
         // console.log('doorClicked');
-        this.camParent.setAttribute('animation' , 'property: position; delay: 3000; to: ' + this.camWorldPosition.x + ' 0 ' + this.camWorldPosition.z + '; easing: easeInOutQuad; loop: false; dur: 3000')
+        // this.camParent.setAttribute('animation' , 'property: position; delay: 3000; to: ' + this.camWorldPosition.x + ' 0 ' + this.camWorldPosition.z + '; easing: easeInOutQuad; loop: false; dur: 3000')
       }
 
       this.cta.addEventListener('click', this.startExperience)
       this.camParent.addEventListener('animationcomplete', this.showPortalElements)
       this.behindDoor.addEventListener('animationcomplete', this.risePlatform)
-      this.doorHole.addEventListener('mouseleave', this.doorClicked)
+      // this.doorHole.addEventListener('mouseleave', this.doorClicked)
     },
     tick() {
       if(!this.positionSet){
