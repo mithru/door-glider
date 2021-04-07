@@ -21,7 +21,6 @@ AFRAME.registerComponent('meta-stuff', {
       this.camFinal = document.getElementById('camFinalPos')
       // this.doorplaceholder = document.getElementById('door-placeholder')
       this.cta = document.getElementById('intro-cta')
-      this.overlay = document.getElementById('intro-overlay')
       this.dashboardElements = document.getElementById('dashboard-content')
       this.camWorldPosition = new THREE.Vector3();
       this.doorCollider = document.getElementById('door-container')
@@ -37,6 +36,8 @@ AFRAME.registerComponent('meta-stuff', {
       this.positionSet = false;
 
       this.startExperience = () => {
+        this.overlay = document.getElementById('overlay')
+
         console.log("start");
         this.positionSet = true
         this.overlay.animate(
@@ -62,7 +63,7 @@ AFRAME.registerComponent('meta-stuff', {
         this.reverseWall.setAttribute('animation' , 'property: position; to: 0 0 10; easing: easeInOutQuad; loop: false; dur: 3000')
       }
       this.risePlatform = () => {
-        this.platform.setAttribute('animation' , 'property: position; to: 0 -2 -15; easing: easeInOutQuad; loop: false; dur: 3000')
+        this.platform.setAttribute('animation' , 'property: position; to: 0 -7 -30; easing: easeInOutQuad; loop: false; dur: 3000')
         this.behindDoor.object3D.visible = false
         // this.behindDoor.object3D.children[0].material.depthTest = false
         // this.moveCameraIntoScene()
