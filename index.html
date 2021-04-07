@@ -125,7 +125,7 @@
                   gltf-model="#door-set"
                   hider-material>
                 </a-entity>
-                <a-plane id="behind-door" width="10" height="10" position="0 5 -0.1" material="shader: flat; color:#fff; opacity: 0.5"></a-plane>
+                <a-plane id="behind-door" width="0" height="0" position="0 5 -0.1" material="shader: flat; color:#fff; opacity: 0.5"></a-plane>
               </a-entity>
               <a-plane id="hider-stage-top" width="50" height="10" position="0 15 0"  hider-material></a-plane>
               <a-plane id="hider-stage-left" width="20" height="10" position="-15 5 0"  hider-material></a-plane>
@@ -146,6 +146,7 @@
               position="0 4 0">
             </a-entity>
             <a-box id="main-stage" depth="3" height="10" width="3" position="0 0.5 -10" material="opacity: 0"></a-box>
+            <a-sound src="src: url(assets/sounds/warmth4-mono.mp3)" autoplay="true" position="0 2 -10"></a-sound>
 
             <a-entity
               id="main1"
@@ -161,7 +162,7 @@
               id="base"
               scale="32 32 32"
               rotation="0 -90 0"
-              position="0 -42 -15"
+              position="0 -7 -30"
               gltf-model="#desert-base"
               cubemap-static>
             </a-entity>

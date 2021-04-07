@@ -63,7 +63,7 @@ AFRAME.registerComponent('meta-stuff', {
         this.reverseWall.setAttribute('animation' , 'property: position; to: 0 0 10; easing: easeInOutQuad; loop: false; dur: 3000')
       }
       this.risePlatform = () => {
-        this.platform.setAttribute('animation' , 'property: position; to: 0 -7 -30; easing: easeInOutQuad; loop: false; dur: 3000')
+        // this.platform.setAttribute('animation' , 'property: position; to: 0 -7 -30; easing: easeInOutQuad; loop: false; dur: 3000')
         this.behindDoor.object3D.visible = false
         // this.behindDoor.object3D.children[0].material.depthTest = false
         // this.moveCameraIntoScene()
